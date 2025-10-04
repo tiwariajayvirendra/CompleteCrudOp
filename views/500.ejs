@@ -1,0 +1,32 @@
+<%- include('./partials/header.ejs') %>
+
+<!-- Main Content -->
+<main class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Error Card -->
+        <div class="card shadow-sm">
+          <div class="card-header card-title bg-warning text-dark">
+            <div class="d-flex align-items-center">
+              <h2 class="mb-0">500 - Error</h2>
+            </div>
+          </div>
+          <div class="card-body">
+            <!-- ✅ Show the dynamic error message if available -->
+            <% if (message) { %>
+               <h1><%= message %></h1>
+            <% } else { %>
+              <p class="text-muted">Internal Server Error</p>
+            <% } %>
+
+            <!-- ✅ Helpful link back -->
+            <a href="/" class="btn btn-primary mt-3">Go Back Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include('./partials/footer.ejs') %>
